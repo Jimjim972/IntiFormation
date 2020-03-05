@@ -3,6 +3,7 @@ package fr.adaming.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -14,6 +15,7 @@ public class Formation {
 	private String theme;
 	
 	@ManyToOne
+	@JoinColumn
 	private Lieu lieu;
 	
 	
@@ -47,6 +49,17 @@ public class Formation {
 
 	public void setTheme(String theme) {
 		this.theme = theme;
+	}
+
+	
+
+	public Lieu getLieu() {
+		return lieu;
+	}
+
+
+	public void setLieu(Lieu lieu) {
+		this.lieu = lieu;
 	}
 
 

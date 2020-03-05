@@ -18,7 +18,7 @@
  
   <div class="dropdown-menu" name="lieux">
   <c:forEach items="${lieux}" var="lieu">
-      <option value ="${lieu.idLieu}">${lieu.ville }</option>
+      <option value ="${lieu.idLieu}">${lieu.ville}</option>
     </div>
  </c:forEach>
  </select>

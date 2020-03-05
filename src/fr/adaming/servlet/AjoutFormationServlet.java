@@ -51,7 +51,10 @@ public class AjoutFormationServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Formation forma = new Formation();
+		//	Lieu l = new Lieu();
 		forma.setTheme(request.getParameter("theme"));
+//		l.setVille(request.getParameter("lieux"));
+//		forma.setLieu(l);
 		IFormationDao dao= new FormationDao();
 		dao.saveNewFormation(forma);
 		

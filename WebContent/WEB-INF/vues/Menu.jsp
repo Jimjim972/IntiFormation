@@ -21,10 +21,10 @@
         <a class="nav-link" href="/IntiFormation/listes">Liste de Formation</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="/IntiFormation/listeparlieu">Liste par lieu</a>
+        <a class="nav-link" href="/IntiFormation/listeparlieu">Liste par lieu</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="/IntiFormation/newlieu">Ajout Lieu</a>
+        <a class="nav-link" href="/IntiFormation/newlieu">Ajoutez un Lieu</a>
       </li>
     </ul>
     
