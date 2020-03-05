@@ -3,6 +3,7 @@ package fr.adaming.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Formation {
@@ -12,6 +13,9 @@ public class Formation {
 	private int id;
 	private String theme;
 	
+	@ManyToOne
+	private Lieu lieu;
+	
 	
 	public Formation() {
 		super();
@@ -19,10 +23,10 @@ public class Formation {
 	}
 
 
-	public Formation(int id, String theme) {
+	public Formation(String theme, Lieu lieu) {
 		super();
-		this.id = id;
 		this.theme = theme;
+		this.lieu = lieu;
 	}
 
 

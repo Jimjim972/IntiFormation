@@ -42,8 +42,8 @@ public class FormationDao implements IFormationDao {
 		try 
 		{
 			session.beginTransaction();
-			Query query =(Query) session.createQuery("SELECT * from Formation");
-			liste=query.getResultList();
+			liste =  session.createQuery(" from Formation").list();
+		
 			return liste;
 		}
 		catch (HibernateException e) 
@@ -52,6 +52,24 @@ public class FormationDao implements IFormationDao {
 			return null;
 		}
 	
+	}
+
+
+	@Override
+	public List<Formation> getFormations(String ville) {
+		try {
+			List<Formation> liste  = new ArrayList<Formation>();
+			Session s = factory.openSession();
+			s.beginTransaction();
+			Query query = (Query) s.createQuery("from Formation where  lieu.ville = :ville");
+			query.setParameter("ville", ville);
+			liste= query.getResultList();
+			return liste;
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			System.out.println("Erreur getFormations par lieu");
+			return null;
+		}
 	}
 
 }
